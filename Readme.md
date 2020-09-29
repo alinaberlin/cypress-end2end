@@ -5,7 +5,6 @@
 
 > Fast, easy and reliable testing for anything that runs in a browser.
 
-
 ![image](https://user-images.githubusercontent.com/6057298/37976975-b5c0526e-31da-11e8-9898-76a2a829cc80.png)
 
 ### Test Runner
@@ -17,8 +16,6 @@ and attempt to run it.
 
 ![image](https://user-images.githubusercontent.com/6057298/37977874-9a959aec-31dc-11e8-9df8-ae68c5ed448e.png)
 
-Cypress tests can be run with any main Continous Integration tool (Travis, CircleCi,...).
-You.
 
 ### Dashboard
 
@@ -26,3 +23,6 @@ The Cypress Dashboard is an optional service
 where all your tests are recorded (screenshots and videos) and make it easier to understand the cause of failing tests.
 
 ![image](https://user-images.githubusercontent.com/6057298/37978812-d79be390-31de-11e8-8d6a-a9d8e458958a.png)
+
+
+![](cypress.gif)
