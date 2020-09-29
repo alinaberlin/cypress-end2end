@@ -1,0 +1,59 @@
+version: '3'
+services:
+  frontend:
+    image: frontend
+    build:
+      context: frontend
+      dockerfile: dev.Dockerfile
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.frontend.rule=Host(`picories.localhost`)'
+      - 'traefik.http.routers.frontend.entrypoints=web'
+    ports:
+      - 8080
+    volumes:
+      - ./frontend/assets:/app/assets
+      - ./frontend/components:/app/components
+      - ./frontend/layouts:/app/layouts
+      - ./frontend/middleware:/app/middleware
+      - ./frontend/pages:/app/pages
+      - ./frontend/plugins:/app/plugins
+      - ./frontend/static:/app/static
+      - ./frontend/store:/app/store
+      - ./frontend/nuxt.config.js:/app/nuxt.config.js
+  backend:
+    image: backend
+    build:
+      context: backend
+      dockerfile: dev.Dockerfile
+    environment:
+      # - MONGODB_USERNAME
+      # - MONGODB_PASSWORD
+      # - MONGODB_DATABASE
+      - MONGODB_CONNECTION_STRING=mongodb://mongo/sw307
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.backend.rule=(Host(`picories.localhost`) && (PathPrefix(`/api`) || PathPrefix(`/socket`)))'
+      - 'traefik.http.routers.backend.entrypoints=web'
+    ports:
+      - 3000
+      - 35729:35729
+    volumes:
+      - ./backend/src:/app/src
+      - ./images:/app/images
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+  load-balancer:
+    image: traefik:v2.2
+    command:
+      - '--api.insecure=true'
+      - '--providers.docker=true'
+      - '--providers.docker.exposedbydefault=false'
+      - '--entrypoints.web.address=:80'
+    ports:
+      - '80:80'
+      - '8080:8080'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'

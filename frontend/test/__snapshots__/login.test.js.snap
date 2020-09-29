@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Login page 1`] = `
+<div class="login">
+  <form>
+    <h1>Log in to your account</h1><label for="email">Email:&nbsp;<input id="email" type="email" placeholder="Your email" required="required"></label><label for="password">Password:&nbsp;<input id="password" type="password" placeholder="Your password" required="required"></label><input type="submit" value="Log in">
+  </form>
+  <!---->
+  <div>Don't have an account yet? <router-link-stub to="/register">Register</router-link-stub>
+  </div>
+</div>
+`;

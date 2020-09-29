@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserCard component Renders an example user 1`] = `
+<div class="box">
+  <h1>Armagan Amcalar (36)</h1>
+  <p>Bio: This user has no bios.</p>
+  <h2>Photos (1)</h2>
+  <div class="photo"><img src="https://picsum.photos/test.jpg">
+    <p>Mihri</p>
+  </div>
+</div>
+`;
