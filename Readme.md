@@ -20,24 +20,6 @@ and attempt to run it.
 
 ### Fork this repo
 
-If you want to experiment with running this project in Continous Integration, you'll need to fork it first.
-
-After forking this project in Github, run these commands:
-
-## clone this repo to a local directory
-git clone https://github.com/<your-username>/cypress-example-kitchensink.git
-
-## cd into the cloned repo
-cd cypress-example-kitchensink
-
-## install the node_modules
-npm install
-
-## start the local webserver
-npm start
-The npm start script will spawn a webserver on port 8080 which hosts the Kitchen Sink App.
-
-You can verify this by opening your browser and navigating to: http://localhost:8080
 
 Fork this repo
 If you want to experiment with running this project in Continous Integration, you'll need to fork it first.
