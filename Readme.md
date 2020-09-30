@@ -24,5 +24,6 @@ where all your tests are recorded (screenshots and videos) and make it easier to
 
 ![image](https://user-images.githubusercontent.com/6057298/37978812-d79be390-31de-11e8-8d6a-a9d8e458958a.png)
 
-This is an example app used to showcase Cypress.io testing. The application uses every API command in Cypress for demonstration purposes. Additionally this example app is configured to run tests in various CI platforms. The tests are also heavily commented. For a full reference of our documentation, go to docs.cypress.io.
+This is an example app how I used to showcase Cypress.io testing.   For a full reference of our documentation, go to docs.cypress.io.
+
 ![](cypress.gif)
