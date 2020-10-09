@@ -11,16 +11,16 @@ If you want to experiment with running this project in Continous Integration, yo
 
 After forking this project in Github, run these commands:
 
-## clone this repo to a local directory
+## 2 clone this repo to a local directory
 git clone https://github.com/alinaberlin/cypress-end2end.git
 
-## cd into the fronted inside repo
+## 3 cd into the fronted inside repo
 cd frontend
 
-## install the node_modules
+## 4 install the node_modules
 npm install
 
-## start the local webserver
+## 5 start the local webserver
 $ docker-compose up
 
 The npm start script will spawn a webserver on port 80, run by Traefik which hosts the Picories app.
@@ -29,7 +29,7 @@ You can verify this by opening your browser and navigating to: http://picories.l
 
 You should see the Picories App up and running. We are now ready to run Cypress tests.
 
-## launch the cypress test runner
+## 7 launch the cypress test runner
 npx cypress open
 
 
